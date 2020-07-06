@@ -257,7 +257,7 @@ GtkTreeView *setup_main_window_tree_view(struct Inventory *inv)
     if (!itemlist)
         goto exit_err;
     gtk_widget_set_name(itemlist, "itemlist");
-    itemliststore = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_UINT, G_TYPE_STRING);
+    itemliststore = gtk_list_store_new(3, G_TYPE_STRING, G_TYPE_ULONG, G_TYPE_STRING);
     if (!itemliststore)
         goto exit_err;
 
