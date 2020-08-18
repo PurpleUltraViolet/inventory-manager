@@ -10,7 +10,7 @@ $(DBUILD)/%.o	Makefile	/^$(DBUILD)\/%.o : $(DSRC)\/%.c$/;"	t
 $(TARGET)	Makefile	/^$(TARGET) : $(OBJ)$/;"	t
 .depend	Makefile	/^.depend : $(SRC)$/;"	t
 CC	Makefile	/^CC = gcc$/;"	m
-CFLAGS	Makefile	/^CFLAGS = -Wall -Wpedantic `pkg-config --cflags gtk+-3.0`$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -Wall -Wpedantic `pkg-config --cflags gtk+-3.0`$/;"	m
 DBIN	Makefile	/^DBIN = bin$/;"	m
 DBUILD	Makefile	/^DBUILD = build$/;"	m
 DSRC	Makefile	/^DSRC = src$/;"	m
@@ -31,7 +31,6 @@ Product	include/product.h	/^struct Product {$/;"	s
 SRC	Makefile	/^SRC = $(wildcard $(DSRC)\/*.c)$/;"	m
 TARGET	Makefile	/^TARGET = $(DBIN)\/inventory$/;"	m
 UITOOLS_H_	include/uitools.h	/^#define UITOOLS_H_$/;"	d
-UI_H_	include/ui.h	/^#define UI_H_$/;"	d
 add_button_cb	src/mainwindow.c	/^void add_button_cb(GtkButton *button, gpointer data)$/;"	f	typeref:typename:void
 amt	include/product.h	/^    unsigned long amt; \/* Number of product *\/$/;"	m	struct:Product	typeref:typename:unsigned long
 button_callback_struct	src/mainwindow.c	/^struct button_callback_struct {$/;"	s	file:
@@ -61,7 +60,6 @@ open_button_cb	src/mainwindow.c	/^void open_button_cb(GtkButton *button, gpointe
 product_create	src/product.c	/^struct Product *product_create(const char *name, unsigned long cost,$/;"	f	typeref:struct:Product *
 product_destroy	src/product.c	/^void product_destroy(struct Product *p)$/;"	f	typeref:typename:void
 remove_button_cb	src/mainwindow.c	/^void remove_button_cb(GtkButton *button, gpointer data)$/;"	f	typeref:typename:void
-run	src/ui.c	/^int run(struct Inventory *inv)$/;"	f	typeref:typename:int
 s	include/inventory.h	/^    size_t s;$/;"	m	struct:Inventory	typeref:typename:size_t
 save_button_cb	src/mainwindow.c	/^void save_button_cb(GtkButton *button, gpointer data)$/;"	f	typeref:typename:void
 setup_main_window	src/mainwindow.c	/^GtkWindow *setup_main_window(GtkWindow *owindow, struct Inventory *oinv)$/;"	f	typeref:typename:GtkWindow *

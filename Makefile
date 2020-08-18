@@ -1,6 +1,6 @@
 CC = gcc
 MKDIR_P = mkdir -p
-CFLAGS = -Wall -Wpedantic `pkg-config --cflags gtk+-3.0`
+CFLAGS = -g -Wall -Wpedantic `pkg-config --cflags gtk+-3.0`
 LDFLAGS = 
 LIB = `pkg-config --libs gtk+-3.0`
 DSRC = src
